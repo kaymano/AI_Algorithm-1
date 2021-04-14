@@ -7,7 +7,6 @@ import os
 from PIL import Image
 import numpy as np
 
-# 
 np.random.seed(1)
 torch.manual_seed(3)
 
@@ -54,7 +53,7 @@ for epoch in range(3):  # loop over the dataset multiple times
 
 print('Finished Training')
 
-data = load_data('images/test','10.png')
+data = load_data('images/test','6.png')
 max_grid_chance = 0
 chances = []
 for i,data in enumerate(data):
@@ -62,6 +61,8 @@ for i,data in enumerate(data):
         image_name, image = data
         out = net(image[None,...])
         out = out[0]
-        chances.append((image_name,out[0]))
+        chances.append((image_name,out[1])) # should be out[0]
 chances.sort(key= lambda x:x[1])
 print(chances)
+
+# Find way to evaluate accuracy of rankings

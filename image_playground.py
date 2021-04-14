@@ -11,7 +11,6 @@ for image_name in [f for f in os.listdir(image_path) if os.path.isfile(os.path.j
     s = x.size
     new_s = (s[0]-s[0]%IMG_WIDTH,s[1]-s[1]%IMG_HEIGHT)
     x = x.resize(new_s)
-    x.show()
     x = np.array(x)
     x_step = IMG_WIDTH
     y_step = IMG_HEIGHT
