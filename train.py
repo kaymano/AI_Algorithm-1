@@ -25,7 +25,7 @@ def load_data(path,image_name):
         data.append((simage_name,x))
     return data
 
-for epoch in range(3):  # loop over the dataset multiple times
+for epoch in range(3):  # loop over the dataset 3 times
 
     running_loss = 0.0
     for im_num, image_name in enumerate(file_list):
