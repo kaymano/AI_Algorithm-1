@@ -6,10 +6,11 @@ import torch
 import os
 from PIL import Image
 import numpy as np
+import random
 
 np.random.seed(1)
 torch.manual_seed(3)
-
+seeded_random = random.Random(0)
 net = WaldoModel()
 criterion = nn.BCELoss()
 optimizer = optim.SGD(net.parameters(), lr=.001)
@@ -23,9 +24,10 @@ def load_data(path,image_name):
         x = np.moveaxis(x, -1, 0)
         x = torch.FloatTensor(x)
         data.append((simage_name,x))
+    seeded_random.shuffle(data)
     return data
 
-for epoch in range(3):  # loop over the dataset 3 times
+for epoch in range(5):  # loop over the dataset 3 times
 
     running_loss = 0.0
     for im_num, image_name in enumerate(file_list):
@@ -44,7 +46,7 @@ for epoch in range(3):  # loop over the dataset 3 times
             optimizer.step()
             # print statistics
             running_loss += loss.item()
-            if i % 25 == 0 or label == [1,0]:    # print every 2000 mini-batches
+            if label == [1,0]:  
                 print(f'Epoch: {epoch}')
                 print(f'Image num: {im_num}')
                 print(f'Grid num: {i}')
@@ -53,7 +55,7 @@ for epoch in range(3):  # loop over the dataset 3 times
 
 print('Finished Training')
 
-data = load_data('images/test','6.png')
+data = load_data('images/test','9.png')
 max_grid_chance = 0
 chances = []
 for i,data in enumerate(data):
@@ -61,8 +63,21 @@ for i,data in enumerate(data):
         image_name, image = data
         out = net(image[None,...])
         out = out[0]
-        chances.append((image_name,out[1])) # should be out[0]
-chances.sort(key= lambda x:x[1])
+        chances.append((image_name,out[0])) # should be out[0]
+chances.sort(key= lambda x:-x[1])
 print(chances)
-
 # Find way to evaluate accuracy of rankings
+current_rank = 0
+diff = 0
+n = len(chances)
+for i,pair in enumerate(chances):
+    rank = i
+    name,_ = pair
+    if name[0] == 'W':
+        diff += (rank - current_rank)
+        current_rank += 1
+        print("Rank:",rank)
+accuracy = (diff/current_rank) / n
+print('Accuracy:', accuracy)
+
+    
