@@ -77,7 +77,7 @@ for i,pair in enumerate(chances):
         diff += (rank - current_rank)
         current_rank += 1
         print("Rank:",rank)
-accuracy = (diff/current_rank) / n
+accuracy = 1 - (diff/current_rank) / n
 print('Accuracy:', accuracy)
 
     
