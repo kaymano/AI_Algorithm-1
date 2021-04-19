@@ -1,6 +1,6 @@
 train model:
-    python models\research\object_detection\model_main_tf2.py --model_dir=models/wally_model_v5 --pipeline_config_path=models\wally_model_v5\pipeline.config --checkpoint_every_n=20
+    python object_detection\model_main_tf2.py --model_dir=wally_model_v5 --pipeline_config_path=wally_model_v5\pipeline.config --checkpoint_every_n=20
 evaluate model:
-    python models\research\object_detection\model_main_tf2.py --model_dir=models/wally_model_v5 --pipeline_config_path=models\wally_model_v5\pipeline.config --checkpoint_dir=models/wally_model_v5
+    python object_detection\model_main_tf2.py --model_dir=wally_model_v5 --pipeline_config_path=wally_model_v5\pipeline.config --checkpoint_dir=wally_model_v5
 export model:
-    python models\research\object_detection\exporter_main_v2.py --input_type image_tensor --pipeline_config_path models\wally_model_v5\pipeline.config --trained_checkpoint_dir models\wally_model_v5 --output_directory exported_models/wally_model_v5
+    python object_detection\exporter_main_v2.py --input_type image_tensor --pipeline_config_path wally_model_v5\pipeline.config --trained_checkpoint_dir wally_model_v5 --output_directory exported_models/wally_model_v5
