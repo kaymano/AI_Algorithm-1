@@ -17,7 +17,7 @@ use_gpu = torch.cuda.is_available()
 net = WaldoModel()
 criterion = nn.BCELoss()
 optimizer = optim.SGD(net.parameters(), lr=.0001)
-file_list = [f for f in os.listdir('images/sub') if os.path.isfile(os.path.join('images',f))]
+file_list = [f for f in os.listdir('images/train_small') if f[-4:]=='.PNG']
 if use_gpu:
     net.to(torch.device("cuda:0"))
 
@@ -36,7 +36,7 @@ for epoch in range(20):  # loop over the dataset 3 times
 
     running_loss = 0.0
     for im_num, image_name in enumerate(file_list):
-        for i, data in enumerate(load_data('images/sub',image_name)):
+        for i, data in enumerate(load_data('images/train_small',image_name)):
             # get the inputs; data is a list of [inputs, labels]
             image_name, image = data
             label = [int(image_name[0] == "W"),int(image_name[0] != "W")]
@@ -64,8 +64,8 @@ for epoch in range(20):  # loop over the dataset 3 times
 print('Finished Training')
 
 sum_accuracy = 0
-for image_name in os.listdir('images/test'):
-    data = load_data('images/test',image_name)
+for image_name in os.listdir('images/test_small'):
+    data = load_data('images/test_small',image_name)
     max_grid_chance = 0
     chances = []
     for i,data in enumerate(data):
@@ -90,6 +90,6 @@ for image_name in os.listdir('images/test'):
             print("Rank:",rank)
     accuracy = 1 - (diff/current_rank) / n
     sum_accuracy += accuracy
-print('Accuracy:', sum_accuracy/len(os.listdir('images/test')))
+print('Accuracy:', sum_accuracy/len(os.listdir('images/test_small')))
 
     

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Downloads</folder>
+	<filename>5.PNG</filename>
+	<path>C:/Users/cmf20/Downloads/5.PNG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1798</width>
+		<height>1009</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>waldo</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1223</xmin>
+			<ymin>514</ymin>
+			<xmax>1290</xmax>
+			<ymax>579</ymax>
+		</bndbox>
+	</object>
+</annotation>
