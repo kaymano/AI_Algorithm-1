@@ -8,8 +8,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'    # Suppress TensorFlow logging (1)
 import pathlib
 import tensorflow as tf
 import time
-from models.research.object_detection.utils import label_map_util
-from models.research.object_detection.utils import visualization_utils as viz_utils
+from object_detection.utils import label_map_util
+from object_detection.utils import visualization_utils as viz_utils
 
 PATH_TO_MODEL_DIR = 'exported_models/wally_model/saved_model'
 PATH_TO_LABELS = 'annotations/label_map.txt'
@@ -88,7 +88,7 @@ for image_path in [f for f in os.listdir('images/test') if f[-4:] == '.PNG']:
           category_index,
           use_normalized_coordinates=True,
           max_boxes_to_draw=200,
-          min_score_thresh=.30,
+          min_score_thresh=.010,
           agnostic_mode=False)
 
     plt.figure()
