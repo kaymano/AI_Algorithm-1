@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>15.jpg</filename>
+	<path>/Users/Kayla/models/research/object_detection/images/train/15.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1600</width>
+		<height>1006</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>waldo</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>290</xmin>
+			<ymin>422</ymin>
+			<xmax>324</xmax>
+			<ymax>473</ymax>
+		</bndbox>
+	</object>
+</annotation>
