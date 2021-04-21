@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>2.jpg</filename>
+	<path>/Users/Kayla/models/research/object_detection/images/test/2.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1286</width>
+		<height>946</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>waldo</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>71</xmin>
+			<ymin>519</ymin>
+			<xmax>113</xmax>
+			<ymax>563</ymax>
+		</bndbox>
+	</object>
+</annotation>

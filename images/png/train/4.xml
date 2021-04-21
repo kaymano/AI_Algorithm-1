@@ -1,13 +1,13 @@
 <annotation>
-	<folder>Downloads</folder>
-	<filename>4.PNG</filename>
-	<path>C:/Users/cmf20/Downloads/4.PNG</path>
+	<folder>train</folder>
+	<filename>4.jpg</filename>
+	<path>/Users/Kayla/models/research/object_detection/images/train/4.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>1795</width>
-		<height>1009</height>
+		<width>2048</width>
+		<height>1272</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1217</xmin>
-			<ymin>347</ymin>
-			<xmax>1247</xmax>
-			<ymax>373</ymax>
+			<xmin>1468</xmin>
+			<ymin>269</ymin>
+			<xmax>1514</xmax>
+			<ymax>314</ymax>
 		</bndbox>
 	</object>
 </annotation>
