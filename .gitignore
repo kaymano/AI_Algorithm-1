@@ -1,4 +1,5 @@
 __*
 .vscode
 exported_models/
-wally_model_v5/
+wally_model_*/
+pre-trained-models/
