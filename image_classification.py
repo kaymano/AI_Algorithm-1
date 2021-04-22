@@ -36,9 +36,9 @@ def load_data(path,image_name):
     seeded_random.shuffle(data)
     return data
 
+print('Training. Could take a while...')
 for epoch in range(20):  # loop over the dataset 3 times
-
-    running_loss = 0.0
+    print(f'Epoch: {epoch}/20')
     for im_num, image_name in enumerate(file_list):
         for i, data in enumerate(load_data(TRAIN_PATH,image_name)):
             # get the inputs; data is a list of [inputs, labels]
@@ -56,14 +56,6 @@ for epoch in range(20):  # loop over the dataset 3 times
             loss = criterion(outputs, labelt)
             loss.backward()
             optimizer.step()
-            # print statistics
-            running_loss += loss.item()
-            if label == [1,0]:  
-                print(f'Epoch: {epoch}')
-                print(f'Image num: {im_num}')
-                print(f'Grid num: {i}')
-                running_loss = 0.0
-                print(labelt,outputs)
 
 print('Finished Training')
 
@@ -75,7 +67,8 @@ for image_name in os.listdir(TEST_PATH):
     for i,data in enumerate(data):
         with torch.no_grad():
             image_name, image = data
-            image = image.cuda(0)
+            if use_gpu:
+                image = image.cuda(0)
             out = net(image[None,...])
             out = out[0]
             chances.append((image_name,out[0])) # should be out[0]
@@ -95,5 +88,3 @@ for image_name in os.listdir(TEST_PATH):
     accuracy = 1 - (diff/current_rank) / n
     sum_accuracy += accuracy
 print('Accuracy:', sum_accuracy/len(os.listdir(TEST_PATH)))
-
-    
