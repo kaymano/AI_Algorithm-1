@@ -15,4 +15,4 @@ pycocotools = {subdirectory = "PythonAPI", git = "https://github.com/philferrier
 [dev-packages]
 
 [requires]
-python_version = "3.8.5"
+python_version = "3"
