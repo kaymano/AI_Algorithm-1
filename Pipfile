@@ -10,8 +10,9 @@ torchaudio = "*"
 tensorflow = "*"
 cython = "*"
 pycocotools = {subdirectory = "PythonAPI", git = "https://github.com/philferriere/cocoapi.git"}
+numpy = "~=1.17"
 
 [dev-packages]
 
 [requires]
-python_version = "3.8.5"
+python_version = "3"
