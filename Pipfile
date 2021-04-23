@@ -8,7 +8,6 @@ torch = "*"
 torchvision = "*"
 torchaudio = "*"
 tensorflow = "*"
-tensorflow-object-detection-api = "*"
 cython = "*"
 pycocotools = {subdirectory = "PythonAPI", git = "https://github.com/philferriere/cocoapi.git"}
 
