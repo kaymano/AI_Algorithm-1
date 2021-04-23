@@ -9,7 +9,7 @@ torchvision = "*"
 torchaudio = "*"
 tensorflow = "*"
 cython = "*"
-pycocotools = {subdirectory = "PythonAPI", git = "https://github.com/cocodataset/cocoapi.git"}
+pycocotools = {subdirectory = "PythonAPI", git = "https://github.com/philferriere/cocoapi.git"}
 
 [dev-packages]
 
