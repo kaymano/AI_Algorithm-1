@@ -26,7 +26,7 @@ REQUIRED_PACKAGES = [
 
 setup(
     name='object_detection',
-    version='0.1',
+    version='0.2',
     install_requires=REQUIRED_PACKAGES,
     include_package_data=True,
     packages=(
