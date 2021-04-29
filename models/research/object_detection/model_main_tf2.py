@@ -27,6 +27,8 @@ python model_main_tf2.py -- \
   --pipeline_config_path=$PIPELINE_CONFIG_PATH \
   --alsologtostderr
 """
+import sys
+sys.path.append("models/research/")
 from absl import flags
 import tensorflow.compat.v2 as tf
 from object_detection import model_lib_v2
