@@ -8,10 +8,11 @@ Adam Sickels, Kayla Manouchehri, Abha Naik, Sery Gunawardena, Chase Fensore
 
 ## Table of Contents:
 - Repository Setup
-- Gem Installations
-- Classes
-- Program Instructions 
-- Testing
+- Requirements
+- Installations
+- Object Detection Program Instructions
+- Image Classification Program Instructions
+- Other Notes
 
 ## Repository Setup:
 
