@@ -77,7 +77,8 @@ python image_classification.py
 ```
 This will take about 5-10 minutes to train the model and display the accuracy
 
-## Citations
+## Other Notes
 
 The `models` subdirectory is taken from [the tensorflow model garden github](https://github.com/tensorflow/models)
 The `wally_model_v6` subdirectory was the output from tensorflow model training
+The `image_splitting.py` file was used to split the images up into grids and should no longer be run
