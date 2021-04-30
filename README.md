@@ -23,6 +23,11 @@ Adam Sickels, Kayla Manouchehri, Abha Naik, Sery Gunawardena, Chase Fensore
 
 Clone repository by running 'git clone https://github.com/kaymano/AI_Algorithm-1' in terminal
 
+## Requirements
+- 64-bit python installation between 3.6 and 3.9, but not including 3.9
+- pip
+- (Microsoft C++ Build Tools)[https://visualstudio.microsoft.com/visual-cpp-build-tools/]
+
 ## Installations:
 1. Navigate to the AI_Algorithm-1 directory
 
