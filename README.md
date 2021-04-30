@@ -35,25 +35,31 @@ pipenv --python path/to/64-bit/python.exe install
 ```
 where path/to/64-bit/python.exe is a path to a 64 bit installation of python between version 3 and 3.9
 
+![Path examples](path.jpg)
+
 Otherwise, run
 ```bash
 pipenv install
 ```
+![Virtual Environment](virtualenv.PNG)
 4. 
 ```bash
 pipenv shell
 ```
+![Shell](shell.PNG)
 
 5. 
 ```bash
 python -m pip install -U ./models/research
 ```
+![Models](models.PNG)
 
 6. 
 Install numpy and if there is an error, ignore it. 
 ```bash
 pip install numpy==1.17
 ```
+![Numpy Installation](numpy.jpg)
 
 If this fails, go to the [TensorFlow Object Detection API Documentation](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html) and [Pytorch Documentation](https://pytorch.org/get-started/locally/) and follow the installation instructions there.
 
@@ -69,6 +75,8 @@ Test the model on testing images
 python models/research/object_detection/model_main_tf2.py --model_dir=wally_model_v6 --pipeline_config_path=wally_model_v6/pipeline_test.config --checkpoint_dir=wally_model_v6
 ```
 After running these commands and the mAP appears, you can press ^C to terminate the program
+
+![Training and Testing](train.PNG)
 
 ## Image Classification Program Instructions
 To test the image classifier, run
