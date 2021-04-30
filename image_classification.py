@@ -73,7 +73,6 @@ for image_name in os.listdir(TEST_PATH):
             out = out[0]
             chances.append((image_name,out[0])) # should be out[0]
     chances.sort(key= lambda x:-x[1])
-    print(chances)
     # Find way to evaluate accuracy of rankings
     current_rank = 0
     diff = 0

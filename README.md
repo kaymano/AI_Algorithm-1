@@ -1,10 +1,4 @@
 # AI_Algorithm-1
-## Installation
-First, navigate a terminal to the AI_Algorithm directory and run `pip install pipenv`
-Then, run `pipenv --python path/to/64-bit/python.exe install` where `path/to/64-bit/python.exe` is the path to a 64 bit python installation on your machine. If the only python installation you have is 64 bit, the you can just run `pipenv install`.
-If you get an error installing tensorflow, it is likely you are not using a 64 bit python.
-Next, run `pipenv shell` and then `python -m pip install -U ./models/research` . Then run `pip install numpy==1.17` and ignore the error. You should now be able to run `python models/research/object_detection/model_main_tf2.py --model_dir=wally_model_v6 --pipeline_config_path=wally_model_v6/pipeline.config --checkpoint_dir=wally_model_v6` to test the model on the training data and `python models/research/object_detection/model_main_tf2.py --model_dir=wally_model_v6 --pipeline_config_path=exported_models/wally_model_v6/pipeline.config --checkpoint_dir=wally_model_v6` to test the model on the training data. 
-If this fails, go to the [TensorFlow Object Detection API Documentation](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html) and [Pytorch Documentation](https://pytorch.org/get-started/locally/) and follow the installation instructions there.
 
 # Where's Waldo AI 
 This program runs the Object Detection code to find Waldo from 10 images. 
@@ -61,7 +55,9 @@ Install numpy and if there is an error, ignore it.
 pip install numpy==1.17
 ```
 
-## Program Instructions
+If this fails, go to the [TensorFlow Object Detection API Documentation](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html) and [Pytorch Documentation](https://pytorch.org/get-started/locally/) and follow the installation instructions there.
+
+## Object Detection Program Instructions
 
 Test the model on training images
 ```bash
@@ -72,12 +68,16 @@ Test the model on testing images
 ```bash
 python models/research/object_detection/model_main_tf2.py --model_dir=wally_model_v6 --pipeline_config_path=wally_model_v6/pipeline_test.config --checkpoint_dir=wally_model_v6
 ```
-
 After running these commands and the mAP appears, you can press ^C to terminate the program
-First, run `pip install pipenv`
-Then, run `pipenv --python path/to/64-bit/python.exe install` where `path/to/64-bit/python.exe` is the path to a 64 bit python installation on your machine. If the only python installation you have is 64 bit, the you can just run `pipenv install`.
-If you get an error installing tensorflow, it is likely you are not using a 64 bit python.
-Next, run `pipenv shell` and then `python -m pip install -U ./models/research` . Then run `pip install numpy==1.17` and ignore the error. You should now be able to run `python models/research/object_detection/model_main_tf2.py --model_dir=wally_model_v6 --pipeline_config_path=wally_model_v6/pipeline.config --checkpoint_dir=wally_model_v6` to test the model on the training data and `python models/research/object_detection/model_main_tf2.py --model_dir=wally_model_v6 --pipeline_config_path=wally_model_v6/pipeline_test.config --checkpoint_dir=wally_model_v6` to test the model on the testing data. 
-If this fails, go to the [TensorFlow Object Detection API Documentation](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html) and [Pytorch Documentation](https://pytorch.org/get-started/locally/) and follow the installation instructions there.
 
+## Image Classification Program Instructions
+To test the image classifier, run
+```bash
+python image_classification.py
+```
+This will take about 5-10 minutes to train the model and display the accuracy
 
+## Citations
+
+The `models` subdirectory is taken from [the tensorflow model garden github](https://github.com/tensorflow/models)
+The `wally_model_v6` subdirectory was the output from tensorflow model training
