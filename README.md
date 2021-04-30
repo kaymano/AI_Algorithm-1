@@ -16,7 +16,7 @@ Adam Sickels, Kayla Manouchehri, Abha Naik, Sery Gunawardena, Chase Fensore
 
 ## Repository Setup:
 
-Clone repository by running 'git clone https://github.com/kaymano/AI_Algorithm-1' in terminal
+Unzip the AI_Algorithm-1.zip folder
 
 ## Requirements
 - 64-bit python installation between 3.6 and 3.9, but not including 3.9
