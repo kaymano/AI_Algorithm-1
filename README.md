@@ -21,6 +21,7 @@ Clone repository by running 'git clone https://github.com/kaymano/AI_Algorithm-1
 - 64-bit python installation between 3.6 and 3.9, but not including 3.9
 - pip
 - (Microsoft C++ Build Tools)[https://visualstudio.microsoft.com/visual-cpp-build-tools/]
+- Wally Model folder, download from https://drive.google.com/drive/folders/1WLSOo3tiMmjCxTzH6y_TZRW_kNHm2M2M?usp=sharing
 
 ## Installations:
 1. Navigate to the AI_Algorithm-1 directory
