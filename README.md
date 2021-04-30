@@ -35,7 +35,7 @@ pipenv --python path/to/64-bit/python.exe install
 ```
 where path/to/64-bit/python.exe is a path to a 64 bit installation of python between version 3 and 3.9
 
-![Path examples](path.jpg)
+![Path examples](path.PNG)
 
 Otherwise, run
 ```bash
@@ -59,7 +59,7 @@ Install numpy and if there is an error, ignore it.
 ```bash
 pip install numpy==1.17
 ```
-![Numpy Installation](numpy.jpg)
+![Numpy Installation](numpy.PNG)
 
 If this fails, go to the [TensorFlow Object Detection API Documentation](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html) and [Pytorch Documentation](https://pytorch.org/get-started/locally/) and follow the installation instructions there.
 
