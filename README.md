@@ -31,6 +31,7 @@ Clone repository by running 'git clone https://github.com/kaymano/AI_Algorithm-1
 ```bash
 pip install pipenv
 ```
+
 3. If you do not have 64-bit python or are running python 3.9, run
 ```bash
 pipenv --python path/to/64-bit/python.exe install
@@ -44,20 +45,20 @@ Otherwise, run
 pipenv install
 ```
 ![Virtual Environment](virtualenv.PNG)
-4. 
+
+4. Next, start a shell with
 ```bash
 pipenv shell
 ```
 ![Shell](shell.PNG)
 
-5. 
+5. Install the object-detection library
 ```bash
 python -m pip install -U ./models/research
 ```
 ![Models](models.PNG)
 
-6. 
-Install numpy and if there is an error, ignore it. 
+6. Install numpy and if there is an error, ignore it. 
 ```bash
 pip install numpy==1.17
 ```
@@ -89,6 +90,6 @@ This will take about 5-10 minutes to train the model and display the accuracy
 
 ## Other Notes
 
-The `models` subdirectory is taken from [the tensorflow model garden github](https://github.com/tensorflow/models)
-The `wally_model_v6` subdirectory was the output from tensorflow model training
-The `image_splitting.py` file was used to split the images up into grids and should no longer be run
+- The `models` subdirectory is taken from [the tensorflow model garden github](https://github.com/tensorflow/models)
+- The `wally_model_v6` subdirectory was the output from tensorflow model training
+- The `image_splitting.py` file was used to split the images up into grids and should no longer be run
