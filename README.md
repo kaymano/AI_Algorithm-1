@@ -10,7 +10,7 @@ If this fails, go to the [TensorFlow Object Detection API Documentation](https:/
 This program runs the Object Detection code to find Waldo from 10 images. 
 
 ## Contributors: Team 5
-Adam Sickels, Kayla Manouchehri, Abha Naik, Sery Gunawardena, Chase 
+Adam Sickels, Kayla Manouchehri, Abha Naik, Sery Gunawardena, Chase Fensore
 
 ## Table of Contents:
 - Repository Setup
